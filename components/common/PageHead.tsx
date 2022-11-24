@@ -13,7 +13,12 @@ interface PageHeadProps {
   ogImageTitle?: string;
 }
 
-const PageHead = ({ title, description, ogImageSrc, ogImageTitle, }: PageHeadProps) => {
+const PageHead = ({
+  title,
+  description,
+  ogImageSrc,
+  ogImageTitle,
+}: PageHeadProps) => {
   const { asPath } = useRouter();
 
   const siteUrl =
@@ -27,26 +32,27 @@ const PageHead = ({ title, description, ogImageSrc, ogImageTitle, }: PageHeadPro
       ogImageTitle ? `?title=${ogImageTitle}` : ""
     }`;
 
-    return (
-      <Head>
-        <title>{fullTitle}</title>
-        <meta name="description" content={description ?? DEFAULT_DESCRIPTION} />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href={fullUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={title ?? DEFAULT_TITLE} />
-        <meta
-          property="og:description"
-          content={description ?? DEFAULT_DESCRIPTION}
-        />
-        <meta property="og:site_name" content={title ?? DEFAULT_TITLE} />
-        <meta property="og:image" content={fullOgImageSrc} />
-        <meta property="og:image:alt" content={title ?? DEFAULT_TITLE} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:url" content={fullUrl} />
-      </Head>
-    );
+  return (
+    <Head>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description ?? DEFAULT_DESCRIPTION} />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="canonical" href={fullUrl} />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title ?? DEFAULT_TITLE} />
+      <meta
+        property="og:description"
+        content={description ?? DEFAULT_DESCRIPTION}
+      />
+      <meta property="og:site_name" content={title ?? DEFAULT_TITLE} />
+      <meta property="og:image" content={fullOgImageSrc} />
+      <meta property="og:image:alt" content={title ?? DEFAULT_TITLE} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:url" content={fullUrl} />
+    </Head>
+  );
 };
 
 export default PageHead;
