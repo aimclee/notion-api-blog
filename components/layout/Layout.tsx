@@ -1,12 +1,14 @@
-import React, {PropsWithChildren} from 'react'
-import Header from './Header';
+import React, { PropsWithChildren } from "react";
+import Footer from "./Footer";
+import Header from "./Header";
 
-const Layout = ({children}:PropsWithChildren) => {
+const Layout = ({ children }: PropsWithChildren<any>) => {
   return (
-    <div>
-        <Header/>
-        <main>{children}</main>
-    </div>
+    <>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </>
   );
 };
 
