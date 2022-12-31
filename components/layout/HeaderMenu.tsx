@@ -50,11 +50,12 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
           />
         </div>
         <h1 className="text-center font-bold text-2xl">
-          <Link href="/profile" legacyBehavior>
+          <Link href="/profile">
             <a>aimclee</a>
           </Link>
         </h1>
 
+        {/* https://stackoverflow.com/questions/54651873/how-to-map-key-value-pairs-of-a-map-in-javascript */}
         <ul className="mt-8 flex flex-col">
           {Object.entries(NavTable).map(([href, value]) => (
             <li
@@ -63,7 +64,7 @@ const HeaderMenu = ({ isMenuOpen }: HeaderMenuProps) => {
                 asPath === href ? "text-black bg-gray-100" : ""
               }`}
             >
-              <Link href={href} legacyBehavior>
+              <Link href={href}>
                 <a className="flex flex-row gap-2 items-center p-4">
                   <span>{value.icon}</span>
                   {value.name}

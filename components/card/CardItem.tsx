@@ -21,10 +21,8 @@ const CardItem = ({ data }: CardItemsProps) => {
               <Image
                 src={cover}
                 alt={title}
-                width={100}
-                height={100}
-                // layout="fill"
-                // objectFit="cover"
+                layout="fill"
+                objectFit="cover"
                 className="group-hover:scale-110 transition-all duration-300"
               />
             </div>

@@ -9,6 +9,7 @@ const Header = () => {
   const { pathname } = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // deps(dependency 배열)를 2번째 인자로 넣어주면 해당 값이 변할때만 1번째 인자의 값이 실행된다.(여기선 return문)
   useEffect(() => {
     document.body.className = isMenuOpen ? "isMenuOpen" : "";
   }, [isMenuOpen]);
