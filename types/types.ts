@@ -11,4 +11,5 @@ import {
     published: string;
     icon: PageObjectResponse["icon"];
     tags: MultiSelectPropertyItemObjectResponse["multi_select"];
+    expiryTime: string;
   }
