@@ -10,7 +10,7 @@ import { parseDatabaseItems } from "../utils/parseDatabaseItems";
 
 interface HomeProps {
   data: CardData[];
-  allTags: CardData["tags"];
+  allTags: CardData["tags"]; 
 }
 
 const Home = ({ data, allTags }: HomeProps) => {
