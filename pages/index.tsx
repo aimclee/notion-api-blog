@@ -4,7 +4,7 @@ import { getAllTags } from "utils/getAllTags";
 import { getDatabaseItems } from "../cms/notion";
 import CardList from "../components/card/CardList";
 import PageHead from "../components/common/PageHead";
-import HeroSection from "../components/Intro/HeroSection";
+import HeroSection from "../components/intro/HeroSection";
 import { CardData } from "../types/types";
 import { parseDatabaseItems } from "../utils/parseDatabaseItems";
 
